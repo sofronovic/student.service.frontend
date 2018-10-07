@@ -1,6 +1,6 @@
-import { Student } from "./student.model.ts";
-import { Subject } from "./subject.model.ts";
-import { StudyProgram } from "./studyprogram.model.ts";
+import { Student } from "./student.model";
+import { Subject } from "./subject.model";
+import { StudyProgram } from "./studyprogram.model";
 
 export class CourseAttending {
 	public id: number;

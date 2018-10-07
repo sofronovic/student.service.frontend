@@ -1,8 +1,9 @@
-import { StudyProgram } from "./studyprogram.model.ts";
-import { Exam } from "./exam.model.ts";
-import { Document } from "./document.model.ts";
-import { CourseAttending } from "./courseattending.model.ts";
-import { Payment } from "./payment.model.ts";
+import { StudyProgram } from "./studyprogram.model";
+import { Exam } from "./exam.model";
+import { Document } from "./document.model";
+import { Payment } from "./payment.model";
+//import { User } from "./user.model";
+import { CourseAttending } from "./courseattending.model";
 
 export class Student {
 	//public id: number;

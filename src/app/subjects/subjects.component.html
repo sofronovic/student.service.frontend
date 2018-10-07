@@ -6,17 +6,20 @@
     <th>Label</th>
     <th>Name</th>
     <th>ECTS</th>
-    <th></th>
+    <th>Study program</th>
   </tr>
   <tr *ngFor="let subject of subjects">
     <td>
-      {{student.label}}
+      {{subject.label}}
     </td>
     <td>
-      {{student.name}}
+      {{subject.name}}
     </td>
     <td>
-      {{student.ects}}
+      {{subject.ects}}
+    </td>
+    <td>
+      {{subject.studyProgram.name}}
     </td>
     <td>
       <button type="button" class="btn btn-primary" aria-label="Edit" (click)="gotoEdit(subject)">
@@ -34,4 +37,3 @@
     <span class="fa fa-plus" aria-hidden="true"></span>
   </button>
 </div> 
-s

@@ -1,4 +1,4 @@
-import { Teacher } from "./teacher.model.ts";
+import { Teacher } from "./teacher.model";
 
 export class TeacherType {
 	public id: number;

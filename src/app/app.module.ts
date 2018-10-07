@@ -14,6 +14,7 @@ import { SubjectsComponent} from './subjects/subjects.component';
 import { AccountsComponent} from './account/accounts.components';
 
 import { StudentService } from './students/student.service';
+import { SubjectDetailComponent } from './subjects-detail/subjects-detail.component';
 import { SubjectService } from './subjects/subject.service';
 import { AccountService} from './account/account.service';
 
@@ -23,6 +24,7 @@ import { AccountService} from './account/account.service';
     StudentsComponent,
     SubjectsComponent,
     AccountsComponent,
+    SubjectDetailComponent,
   ],
   imports: [
     NgbModule.forRoot(),

@@ -1,10 +1,10 @@
-import { Teacher } from "./teacher.model.ts";
-import { Subject } from "./subject.model.ts";
+import { Teacher } from "./teacher.model";
+import { SubjectModel } from "./subject.model";
 
 export class CourseLecture {
 	public id: number;
 	public teacher: Teacher;
-	public subject: Subject;
+	public subject: SubjectModel;
 
 	public constructor() {
 

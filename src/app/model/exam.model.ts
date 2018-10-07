@@ -1,5 +1,5 @@
-import { Student } from "./student.model.ts";
-import { CourseAttending } from "./courseattending.model.ts";
+import { Student } from "./student.model";
+import { CourseAttending } from "./courseattending.model";
 
 export class Exam {
 	public id: number;

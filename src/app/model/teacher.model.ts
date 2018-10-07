@@ -1,5 +1,5 @@
-import { CourseLecture } from "./courselecture.model.ts";
-import { TeacherType } from "./teachertype.model.ts";
+import { CourseLecture } from "./courselecture.model";
+import { TeacherType } from "./teachertype.model";
 
 export class Teacher {
 	public teacherType: TeacherType;
