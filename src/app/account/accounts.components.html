@@ -1,0 +1,32 @@
+<div>
+  <h3>Accounts</h3>
+</div>
+<table class="table table-bordered">
+  <tr>
+    <th>Account number</th>
+    <th>Balance</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let account of accounts">
+    <td>
+      {{account.accountNumber}}
+    </td>
+    <td>
+      {{account.balance}}
+    </td>
+    <td>
+      <button type="button" class="btn btn-primary" aria-label="Edit" (click)="gotoEdit(account)">
+        <span class="fa fa-edit" aria-hidden="true"></span>
+      </button>
+
+      <button type="button" class="btn btn-primary" aria-label="Delete" (click)="deleteAccount(account.id)">
+        <span class="fa fa-remove" aria-hidden="true"></span>
+      </button>
+    </td>
+  </tr>
+</table>
+<div class="right">
+  <button type="button" class="btn btn-primary" aria-label="Add" (click)="gotoAdd()">
+    <span class="fa fa-plus" aria-hidden="true"></span>
+  </button>
+</div> 
