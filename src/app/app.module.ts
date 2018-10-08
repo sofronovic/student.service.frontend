@@ -18,8 +18,6 @@ import { SubjectDetailComponent } from './subjects-detail/subjects-detail.compon
 import { SubjectService } from './subjects/subject.service';
 import { AccountService} from './account/account.service';
 
-import { StudentService } from './students/student.service';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +34,6 @@ import { StudentService } from './students/student.service';
     routing
   ],
   providers: [StudentService, SubjectService, AccountService],
-  providers: [StudentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

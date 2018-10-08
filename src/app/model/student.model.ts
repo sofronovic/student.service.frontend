@@ -1,13 +1,13 @@
-<<<<<<< HEAD
 import { StudyProgram } from "./studyprogram.model";
 import { Exam } from "./exam.model";
 import { Document } from "./document.model";
 import { Payment } from "./payment.model";
-//import { User } from "./user.model";
+import { User } from "./user.model";
 import { CourseAttending } from "./courseattending.model";
 
-export class Student implements StudentInterface {
-	//public id: number;
+//should extend User
+export class Student {
+	public id: number;
 	public indeks: string;
 	public studyProgram: StudyProgram;
 	public documentList: Array<Document>;
@@ -15,18 +15,12 @@ export class Student implements StudentInterface {
 	public courseAttendingList: Array<CourseAttending>;
 	public paymentList: Array<Payment>;
 
-	constructor(studentCfg:StudentInterface)
-	{	
-		this.id = studentCfg.id;
-		this.index = studentCfg.index;
-		this.firstName = studentCfg.firstName;
-		this.lastName = studentCfg.lastName;		
-	}
-}
+public constructor () {
 
-interface StudentInterface{
-	id?: number;
-	index: string;
-	firstName: string;	
-	lastName: string;
+}
+//	public constructor(username: string, firstname: string, lastname: string, birthday: string, email:string, indeks: string, studyProgram: StudyProgram){
+//		super(username, firstname, lastname, birthday, email);
+//		this.indeks = indeks;
+//		this.studyProgram = studyProgram;
+//	}
 }

@@ -1,6 +1,6 @@
 import { CourseAttending } from "./courseattending.model";
-import { CourseLecture } from "./courselecture.model";
 import { StudyProgram } from "./studyprogram.model";
+import { CourseLecture } from "./courselecture.model";
 
 export class SubjectModel implements SubjectInterface {
 	public id: number;
@@ -10,7 +10,7 @@ export class SubjectModel implements SubjectInterface {
 	public studyProgram: StudyProgram;
 	public courseAttending: Array<CourseAttending>;
 	public courseLecture: Array<CourseLecture>;
-		
+
 	constructor(subjectCfg:SubjectInterface) {
 		this.id = subjectCfg.id;
 		this.label = subjectCfg.label;
@@ -22,7 +22,7 @@ export class SubjectModel implements SubjectInterface {
 */
 	}
 }
-	
+
 interface SubjectInterface {
 	id?: number;
 	label: string;
@@ -31,4 +31,4 @@ interface SubjectInterface {
 	studyProgram: StudyProgram;
 /*	courseAttending: Array<CourseAttending>;
 	courseLecture: Array<CourseLecture>;*/
-}	
+}

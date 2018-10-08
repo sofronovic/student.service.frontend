@@ -1,6 +1,6 @@
 import { Student } from "./student.model";
 
-export class StudyProgram implement StudyProgramInterface {
+export class StudyProgram implements StudyProgramInterface {
 	public id: number;
 	public name: string;
 	public duration: number;
@@ -11,13 +11,13 @@ export class StudyProgram implement StudyProgramInterface {
 		this.id = studyProgramCfg.id;
 		this.name = studyProgramCfg.name;
 		this.duration = studyProgramCfg.duration;
-		this.courseType =studyProgramCfg.courseType;
+		this.courseType = studyProgramCfg.courseType;
 	}
 }
 
 interface StudyProgramInterface {
 	id?: number;
-	name: string,
-	duration: number,
-	courseType: string
+	name: string;
+	duration: number;
+	courseType: string;
 }
