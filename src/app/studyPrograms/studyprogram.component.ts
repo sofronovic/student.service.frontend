@@ -7,7 +7,7 @@ import { StudyProgramService } from './studyprogram.service';
 
 @Component({
   selector: 'studyprogram-list',
-  templateUrl: './studyprogram.component.html',
+  templateUrl: './studyprograms.component.html',
   styleUrls: ['./studyprogram.component.css']
 })
 export class StudyProgramComponent implements OnInit {
@@ -27,7 +27,7 @@ export class StudyProgramComponent implements OnInit {
   }
 
   getStudyPrograms() {
-    this.studyProgramService.studyProgramService().then(studyPrograms =>
+    this.studyProgramService.getStudyPrograms().then(studyPrograms =>
       this.studyPrograms = studyPrograms);
   }
 
@@ -39,8 +39,8 @@ export class StudyProgramComponent implements OnInit {
     this.router.navigate(['/editStudyProgram', studyProgram.id]);
   }
 
-  deleteStudent(studyPogramId: number): void {
-    this.studyProgramSerivce.deleteStudyProgram(studyPogramId).then(
+  deleteStudyProgram(studyPogramId: number): void {
+    this.studyProgramService.deleteStudyProgram(studyPogramId).then(
       () => this.getStudyPrograms()
     );
   }

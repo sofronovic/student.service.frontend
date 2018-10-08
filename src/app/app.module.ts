@@ -18,6 +18,8 @@ import { StudyProgramService } from './studyPrograms/studyprogram.service';
 import { SubjectDetailComponent } from './subjects-detail/subjects-detail.component';
 import { SubjectService } from './subjects/subject.service';
 import { AccountService} from './account/account.service';
+import { StudyProgramComponent } from "./studyPrograms/studyprogram.component";
+import { StudyProgramDetailComponent } from "./study-programs-detail/study-program-detail-component";
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { AccountService} from './account/account.service';
     SubjectsComponent,
     AccountsComponent,
     SubjectDetailComponent,
+    StudyProgramComponent,
+    StudyProgramDetailComponent,
   ],
   imports: [
     NgbModule.forRoot(),
