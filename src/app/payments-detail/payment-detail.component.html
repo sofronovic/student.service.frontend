@@ -1,0 +1,34 @@
+  <form >
+        <div class="form-group">
+          <label for="field1c" class="form-control-label">Description</label>
+          <input type="text" [(ngModel)]="payment.description" placeholder="Payment description"
+             class="form-control" id="field1c" name="field1">
+        </div>
+
+        <div class="form-group">
+          <label for="field2c" class="form-control-label">Date</label>
+          <input type="text" [(ngModel)]="payment.date" placeholder="Payment date"
+             class="form-control" id="field2c" name="field2">
+        </div>
+
+        <div class="form-group">
+          <label for="field3c" class="form-control-label">Amount</label>
+          <input type="text" [(ngModel)]="payment.amount" placeholder="Payment amount"
+             class="form-control" id="field3c" name="field3">
+        </div>
+   </form>
+
+<div>
+     <h3>Student</h3>
+</div>
+
+<div class="form-group">
+     <select class="form-control" [(ngModel)]="payment.student">
+           <option *ngFor="let s of students" [ngValue]="s">{{s.firstname}}</option>
+         </select>
+       </div>
+
+<div>
+  <button class="btn btn-primary" (click)="goBack()">Cancel</button>
+  <button class="btn btn-primary" (click)="save()">OK</button>
+</div>

@@ -8,6 +8,8 @@ import { AccountsComponent } from "./account/accounts.components";
 import { SubjectDetailComponent } from "./subjects-detail/subjects-detail.component";
 import { StudyProgramDetailComponent } from "./study-programs-detail/study-program-detail-component";
 import { StudyProgramComponent } from "./studyPrograms/studyprogram.component";
+import { PaymentsComponent } from "./payments/payments.component";
+import { PaymentDetailComponent } from "./payments-detail/payment-detail.component";
 
 const routes: Routes = [
   { path: '', component: StudentsComponent },
@@ -19,6 +21,9 @@ const routes: Routes = [
   { path: 'studyPrograms', component: StudyProgramComponent},
   { path: 'addStudyProgram', component: StudyProgramDetailComponent},
   { path: 'editStudyProgram/:id', component: StudyProgramDetailComponent},
+  { path: 'payments', component: PaymentsComponent},
+  { path: 'addPayment', component: PaymentDetailComponent },
+  { path: 'editPayment/:id', component: PaymentDetailComponent },
   { path: '**', redirectTo: '' }
 ];
 

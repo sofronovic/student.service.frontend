@@ -1,0 +1,39 @@
+<div>
+  <h3>Payments</h3>
+</div>
+<table class="table table-bordered">
+  <tr>
+    <th>Description</th>
+    <th>Date</th>
+    <th>Amount</th>
+    <th>Student</th>
+  </tr>
+  <tr *ngFor="let payment of payments">
+    <td>
+      {{payment.description}}
+    </td>
+    <td>
+      {{payment.date}}
+    </td>
+    <td>
+      {{payment.amount}}
+    </td>
+    <td>
+      {{payment.student.indeks}}
+    </td>
+    <td>
+      <button type="button" class="btn btn-primary" aria-label="Edit" (click)="gotoEdit(subject)">
+        <span class="fa fa-edit" aria-hidden="true"></span>
+      </button>
+
+      <button type="button" class="btn btn-primary" aria-label="Delete" (click)="deletePayment(payment.id)">
+        <span class="fa fa-remove" aria-hidden="true"></span>
+      </button>
+    </td>
+  </tr>
+</table>
+<div class="right">
+  <button type="button" class="btn btn-primary" aria-label="Add" (click)="gotoAdd()">
+    <span class="fa fa-plus" aria-hidden="true"></span>
+  </button>
+</div>
