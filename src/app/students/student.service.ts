@@ -52,7 +52,6 @@ export class StudentService {
             .put(this.studentsUrl, JSON.stringify(student), { headers: this.headers })
             .toPromise()
             .then(res => res.json() as Student)
-            
             .catch(this.handleError);
     }
 
