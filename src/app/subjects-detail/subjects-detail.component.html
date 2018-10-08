@@ -1,44 +1,34 @@
-<div>
-  <h3>Subjects</h3>
-</div>
-
-<div>
-
   <form >
         <div class="form-group">
           <label for="field1c" class="form-control-label">Name</label>
-          <input type="text" [(ngModel)]="subject.name" placeholder="Subject name" 
+          <input type="text" [(ngModel)]="subject.name" placeholder="Subject name"
              class="form-control" id="field1c" name="field1">
         </div>
 
         <div class="form-group">
           <label for="field2c" class="form-control-label">Label</label>
-          <input type="text" [(ngModel)]="subject.label" placeholder="Subject label" 
+          <input type="text" [(ngModel)]="subject.label" placeholder="Subject label"
              class="form-control" id="field2c" name="field2">
         </div>
-       
+
         <div class="form-group">
           <label for="field3c" class="form-control-label">ECTS</label>
-          <input type="text" [(ngModel)]="subject.ects" placeholder="Subject ECTS" 
+          <input type="text" [(ngModel)]="subject.ects" placeholder="Subject ECTS"
              class="form-control" id="field3c" name="field3">
         </div>
    </form>
-  
 
-  <!-- <div *ngIf="subject.id"> 
-    <div>
-        <h3>Courses</h3>
-    </div>
-    <table class="table table-bordered">
-      <tr *ngFor="let enrollment of enrollments">
-        <td>
-          {{enrollment.course.name}}
-        </td>
-      </tr>
-    </table>
-  </div>  -->
+<div>
+     <h3>Subjects</h3>
 </div>
+
+<div class="form-group">
+     <select class="form-control" [(ngModel)]="subject.studyProgram">
+           <option *ngFor="let s of studyPrograms" [ngValue]="s">{{s.name}}</option>
+         </select>
+</div>
+
 <div>
   <button class="btn btn-primary" (click)="goBack()">Cancel</button>
   <button class="btn btn-primary" (click)="save()">OK</button>
-</div> 
+</div>

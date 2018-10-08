@@ -64,6 +64,7 @@ export class SubjectService {
 
     handleError(error: any): Promise<any> {
     	console.error("Error... ", error);
+			    	console.error("Error... ", error.message);
     	return Promise.reject(error.message || error);
     }
 }

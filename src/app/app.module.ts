@@ -14,6 +14,7 @@ import { SubjectsComponent} from './subjects/subjects.component';
 import { AccountsComponent} from './account/accounts.components';
 
 import { StudentService } from './students/student.service';
+import { StudyProgramService } from './studyPrograms/studyprogram.service';
 import { SubjectDetailComponent } from './subjects-detail/subjects-detail.component';
 import { SubjectService } from './subjects/subject.service';
 import { AccountService} from './account/account.service';
@@ -33,7 +34,7 @@ import { AccountService} from './account/account.service';
     HttpModule,
     routing
   ],
-  providers: [StudentService, SubjectService, AccountService],
+  providers: [StudentService, SubjectService, AccountService, StudyProgramService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

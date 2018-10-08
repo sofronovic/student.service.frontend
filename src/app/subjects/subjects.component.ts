@@ -39,7 +39,7 @@ export class SubjectsComponent implements OnInit {
     this.router.navigate(['/editSubjects', subject.id]);
   }
 
-  deleteStudent(subjectId: number): void {
+  deleteSubject(subjectId: number): void {
     this.subjectService.deleteSubject(subjectId).then(
       () => this.getSubjects()
     );

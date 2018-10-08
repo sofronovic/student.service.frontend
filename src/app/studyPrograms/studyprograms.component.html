@@ -1,32 +1,29 @@
 <div>
-  <h3>Subjects</h3>
+  <h3>Study programs</h3>
 </div>
 <table class="table table-bordered">
   <tr>
-    <th>Label</th>
     <th>Name</th>
-    <th>ECTS</th>
-    <th>Study program</th>
+    <th>Duration</th>
+    <th>Course type</th>
+    <th></th>
   </tr>
-  <tr *ngFor="let subject of subjects">
+  <tr *ngFor="let i of studyPrograms">
     <td>
-      {{subject.label}}
+      {{i.name}}
     </td>
     <td>
-      {{subject.name}}
+      {{i.duration}}
     </td>
     <td>
-      {{subject.ects}}
+      {{i.courseType}}
     </td>
     <td>
-      {{subject.studyProgram.name}}
-    </td>
-    <td>
-      <button type="button" class="btn btn-primary" aria-label="Edit" (click)="gotoEdit(subject)">
+      <button type="button" class="btn btn-primary" aria-label="Edit" (click)="gotoEdit(i)">
         <span class="fa fa-edit" aria-hidden="true"></span>
       </button>
 
-      <button type="button" class="btn btn-primary" aria-label="Delete" (click)="deleteSubject(subject.id)">
+      <button type="button" class="btn btn-primary" aria-label="Delete" (click)="deleteStudyProgram(i.id)">
         <span class="fa fa-remove" aria-hidden="true"></span>
       </button>
     </td>

@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'students', component: StudentsComponent },
   { path: 'subjects', component: SubjectsComponent },
   { path: 'addSubject', component: SubjectDetailComponent },
-  { path: 'editSubject/:id', component: SubjectDetailComponent},
+  { path: 'editSubjects/:id', component: SubjectDetailComponent},
   { path: 'accounts', component: AccountsComponent},
   { path: '**', redirectTo: '' }
 ];
