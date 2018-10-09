@@ -17,7 +17,7 @@ export class User implements IUser {
 	}
 }
 
-interface IUser {
+export interface IUser {
 	id?: number;
 	username: string;
 	firstname: string;
