@@ -24,6 +24,9 @@ import { PaymentsComponent } from "./payments/payments.component";
 import { PaymentService } from "./payments/payment.service";
 import { PaymentDetailComponent } from "./payments-detail/payment-detail.component";
 import { StudentDetailComponent } from "./students-detail/student-detail-component";
+import { CourseAttendingComponent } from "./course-attending/course-attending.component";
+import { CourseAttendingService } from "./course-attending/course-attending.service";
+
 
 @NgModule({
   declarations: [
@@ -37,6 +40,7 @@ import { StudentDetailComponent } from "./students-detail/student-detail-compone
     PaymentsComponent,
     PaymentDetailComponent,
     StudentDetailComponent,
+    CourseAttendingComponent,
   ],
   imports: [
     NgbModule.forRoot(),
@@ -45,7 +49,7 @@ import { StudentDetailComponent } from "./students-detail/student-detail-compone
     HttpModule,
     routing
   ],
-  providers: [StudentService, SubjectService, AccountService, StudyProgramService, PaymentService],
+  providers: [StudentService, SubjectService, AccountService, StudyProgramService, PaymentService, CourseAttendingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
