@@ -22,7 +22,6 @@ export class StudentService {
     }
 
     getStudents(): Promise<Student[]> {
-        console.log(this.http.get(this.studentsUrl));
         return this.http.get(this.studentsUrl)
             .toPromise()
             .then(response =>
@@ -59,7 +58,7 @@ export class StudentService {
         const url = `${this.studentsUrl}/${studentId}`;
         return this.http
             .delete(url)
-            .toPromise()           
+            .toPromise()
             .catch(this.handleError);
     }
 

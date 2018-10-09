@@ -19,10 +19,7 @@ import 'rxjs/add/operator/switchMap';
 })
 export class SubjectDetailComponent implements OnInit {
   subject: SubjectModel;
-
   studyPrograms: StudyProgram[];
-
-
   mode: string;
 
   constructor(private subjectService: SubjectService, private studyProgramService: StudyProgramService, private route: ActivatedRoute, private location: Location) {

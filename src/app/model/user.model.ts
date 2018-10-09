@@ -1,4 +1,4 @@
-export class User  {
+export class User implements IUser {
 	public id: number;
 	public username: string;
 	public firstname: string;
@@ -6,11 +6,22 @@ export class User  {
 	public birthday: string;
 	public email: string;
 
-	public constructor(username: string, firstname: string, lastname: string, birthday: string, email:string) {
-		this.username = username;
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.birthday = birthday;
-		this.email = email;
+	public constructor(iUser: IUser)
+	{
+		this.id = iUser.id;
+		this.username = iUser.username;
+		this.firstname = iUser.firstname;
+		this.lastname = iUser.lastname;
+		this.birthday = iUser.birthday;
+		this.email = iUser.email;
 	}
+}
+
+interface IUser {
+	id?: number;
+	username: string;
+	firstname: string;
+	lastname: string;
+	birthday: string;
+	email: string;
 }

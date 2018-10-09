@@ -3,20 +3,31 @@
 </div>
 <table class="table table-bordered">
   <tr>
-    <th>Index</th>
     <th>First name</th>
     <th>Last name</th>
-    <th></th>
+    <th>Birthday</th>
+    <th>Email</th>
+    <th>Indeks</th>
+    <th>Study program</th>
   </tr>
   <tr *ngFor="let student of students">
+    <td>
+      {{student.firstname}}
+    </td>
+    <td>
+      {{student.lastname}}
+    </td>
+    <td>
+      {{student.birthday}}
+    </td>
+    <td>
+      {{student.email}}
+    </td>
     <td>
       {{student.index}}
     </td>
     <td>
-      {{student.firstName}}
-    </td>
-    <td>
-      {{student.lastName}}
+      {{student.studyProgram.name}}
     </td>
     <td>
       <button type="button" class="btn btn-primary" aria-label="Edit" (click)="gotoEdit(student)">
@@ -33,4 +44,4 @@
   <button type="button" class="btn btn-primary" aria-label="Add" (click)="gotoAdd()">
     <span class="fa fa-plus" aria-hidden="true"></span>
   </button>
-</div> 
+</div>

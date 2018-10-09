@@ -10,6 +10,7 @@ import { StudyProgramDetailComponent } from "./study-programs-detail/study-progr
 import { StudyProgramComponent } from "./studyPrograms/studyprogram.component";
 import { PaymentsComponent } from "./payments/payments.component";
 import { PaymentDetailComponent } from "./payments-detail/payment-detail.component";
+import { StudentDetailComponent } from "./students-detail/student-detail-component";
 
 const routes: Routes = [
   { path: '', component: StudentsComponent },
@@ -24,6 +25,8 @@ const routes: Routes = [
   { path: 'payments', component: PaymentsComponent},
   { path: 'addPayment', component: PaymentDetailComponent },
   { path: 'editPayment/:id', component: PaymentDetailComponent },
+  { path: 'addStudent', component: StudentDetailComponent},
+  { path: 'editStudent/:id', component: StudentDetailComponent},
   { path: '**', redirectTo: '' }
 ];
 

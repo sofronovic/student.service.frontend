@@ -4,10 +4,9 @@ import { Document } from "./document.model";
 import { Payment } from "./payment.model";
 import { User } from "./user.model";
 import { CourseAttending } from "./courseattending.model";
+import { IUser } from "./user.model";
 
-//should extend User
-export class Student {
-	public id: number;
+export class Student extends User implements IStudent, IUser {
 	public indeks: string;
 	public studyProgram: StudyProgram;
 	public documentList: Array<Document>;
@@ -15,12 +14,15 @@ export class Student {
 	public courseAttendingList: Array<CourseAttending>;
 	public paymentList: Array<Payment>;
 
-public constructor () {
-
+	public constructor(iUser: IUser, iStudent: IStudent)
+	{
+		super(iUser);
+		this.indeks = iStudent.indeks;
+		this.studyProgram = iStudent.studyProgram;
+	}
 }
-//	public constructor(username: string, firstname: string, lastname: string, birthday: string, email:string, indeks: string, studyProgram: StudyProgram){
-//		super(username, firstname, lastname, birthday, email);
-//		this.indeks = indeks;
-//		this.studyProgram = studyProgram;
-//	}
+
+export interface IStudent {
+	indeks: string;
+	studyProgram: StudyProgram;
 }
