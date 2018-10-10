@@ -44,7 +44,7 @@ import { CourseAttendingService } from "./course-attending/course-attending.serv
     PaymentDetailComponent,
     StudentDetailComponent,
     DocumentsComponent,
-    DocumentDetailComponent
+    DocumentDetailComponent,
     CourseAttendingComponent,
   ],
   imports: [
@@ -55,8 +55,7 @@ import { CourseAttendingService } from "./course-attending/course-attending.serv
     routing
   ],
 
-  providers: [StudentService, SubjectService, AccountService, StudyProgramService, PaymentService, DocumentService],
-  providers: [StudentService, SubjectService, AccountService, StudyProgramService, PaymentService, CourseAttendingService],
+  providers: [StudentService, SubjectService, AccountService, StudyProgramService, PaymentService, DocumentService, CourseAttendingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

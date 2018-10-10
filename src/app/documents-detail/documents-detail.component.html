@@ -1,8 +1,13 @@
-<form >
+<form #docForm="ngForm">
       <div class="form-group">
         <label for="field1c" class="form-control-label">Name</label>
-        <input type="text" [(ngModel)]="document.name" placeholder="Document name"
-           class="form-control" id="field1c" name="field1">
+        <input type="text" required maxlength="150" [(ngModel)]="document.name" placeholder="Document name"
+           class="form-control" id="field1c" name="field1" #documentNameControl="ngModel">
+        <div *ngIf="documentNameControl.errors && (documentNameControl.dirty || documentNameControl.touched)" class="alert alert-danger">
+            <div [hidden]="!documentNameControl.errors.required">
+              Document name is required!
+            </div>
+        </div>
       </div>
 
  </form>
@@ -21,5 +26,5 @@
 
 <div>
 <button class="btn btn-primary" (click)="goBack()">Cancel</button>
-<button class="btn btn-primary" (click)="save()">OK</button>
+<button class="btn btn-primary" [disabled]="!docForm.form.valid" (click)="save()">OK</button>
 </div>
