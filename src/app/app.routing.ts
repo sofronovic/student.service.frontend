@@ -14,6 +14,10 @@ import { StudentDetailComponent } from "./students-detail/student-detail-compone
 import { DocumentsComponent } from './documents/documents.component';
 import { DocumentDetailComponent } from './documents-detail/documents-detail.component';
 import { CourseAttendingComponent } from "./course-attending/course-attending.component";
+import { TeacherTypeComponent} from './teacherType/teacherType.component';
+import { TeacherTypeDetailComponent} from './teacherType-detail/teacherType-detail.component';
+import { TeacherComponent } from './teachers/teachers.component';
+import { TeacherDetailComponent} from './teachers-detail/teacher-detail.component';
 
 const routes: Routes = [
   { path: '', component: StudentsComponent },
@@ -34,6 +38,12 @@ const routes: Routes = [
 { path: 'addDocument', component: DocumentDetailComponent},
 { path: 'editDocument/:id', component: DocumentDetailComponent},
   { path: 'courseAttending', component: CourseAttendingComponent},
+  { path: 'teacherType', component: TeacherTypeComponent},
+  { path: 'addTeacherType', component: TeacherTypeDetailComponent},
+  { path: 'editTeacherType/:id', component: TeacherTypeDetailComponent},
+  { path: 'teachers', component: TeacherComponent},
+  { path: 'addTeacher',  component: TeacherDetailComponent},
+  { path: 'editTeacher/:id' , component: TeacherDetailComponent},
   { path: '**', redirectTo: '' }
 ];
 

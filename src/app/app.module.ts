@@ -13,7 +13,13 @@ import { StudentsComponent } from './students/students.component';
 import { SubjectsComponent} from './subjects/subjects.component';
 import { AccountsComponent} from './account/accounts.components';
 import { DocumentsComponent } from './documents/documents.component';
+import { TeacherTypeComponent} from './teacherType/teacherType.component';
+import { TeacherTypeDetailComponent} from './teacherType-detail/teacherType-detail.component';
+import { TeacherComponent } from  './teachers/teachers.component';
+import { TeacherDetailComponent} from './teachers-detail/teacher-detail.component';
 
+import {TeacherService} from './teachers/teachers.service';
+import { TeacherTypeService} from './teacherType/teacherType.service';
 import { StudentService } from './students/student.service';
 import { StudyProgramService } from './studyPrograms/studyprogram.service';
 import { SubjectDetailComponent } from './subjects-detail/subjects-detail.component';
@@ -44,8 +50,12 @@ import { CourseAttendingService } from "./course-attending/course-attending.serv
     PaymentDetailComponent,
     StudentDetailComponent,
     DocumentsComponent,
-    DocumentDetailComponent
+    DocumentDetailComponent,
     CourseAttendingComponent,
+    TeacherTypeComponent,
+    TeacherTypeDetailComponent,
+    TeacherComponent,
+    TeacherDetailComponent
   ],
   imports: [
     NgbModule.forRoot(),
@@ -55,8 +65,9 @@ import { CourseAttendingService } from "./course-attending/course-attending.serv
     routing
   ],
 
-  providers: [StudentService, SubjectService, AccountService, StudyProgramService, PaymentService, DocumentService],
-  providers: [StudentService, SubjectService, AccountService, StudyProgramService, PaymentService, CourseAttendingService],
+
+  providers: [StudentService, SubjectService, AccountService, StudyProgramService, PaymentService,
+    CourseAttendingService, DocumentService, TeacherTypeService, TeacherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

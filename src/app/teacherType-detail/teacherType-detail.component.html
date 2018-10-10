@@ -1,0 +1,12 @@
+<form>
+      <div class="form-group">
+        <label for="field1c" class="form-control-label">Name</label>
+        <input type="text" [(ngModel)]="teacherType.name" placeholder="Teacher type name"
+           class="form-control" id="field1c" name="field1">
+      </div>
+
+ </form>
+<div>
+<button class="btn btn-primary" (click)="goBack()">Cancel</button>
+<button class="btn btn-primary" (click)="save()">OK</button>
+</div>

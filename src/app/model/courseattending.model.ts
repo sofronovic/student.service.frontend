@@ -7,7 +7,7 @@ export class CourseAttending implements ICourseAttending {
 	public student: Student;
 	public subject: SubjectModel;
 
-	public constructor(courseAttending: ICourseAttending) 
+	public constructor(courseAttending: ICourseAttending)
 	{
 		this.id = courseAttending.id;
 		this.student = courseAttending.student;
