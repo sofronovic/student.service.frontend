@@ -35,6 +35,9 @@ import { DocumentService } from './documents/document.service';
 import { DocumentDetailComponent } from './documents-detail/documents-detail.component';
 import { CourseAttendingComponent } from "./course-attending/course-attending.component";
 import { CourseAttendingService } from "./course-attending/course-attending.service";
+import { ExamService } from "./exams/exam.service";
+import { ExamsComponent } from "./exams/exam.component";
+import { ExamDetailComponent } from "./exams-detail/exam-detail.component";
 
 
 @NgModule({
@@ -55,7 +58,9 @@ import { CourseAttendingService } from "./course-attending/course-attending.serv
     TeacherTypeComponent,
     TeacherTypeDetailComponent,
     TeacherComponent,
-    TeacherDetailComponent
+    TeacherDetailComponent,
+    ExamsComponent,
+    ExamDetailComponent
   ],
   imports: [
     NgbModule.forRoot(),
@@ -67,7 +72,7 @@ import { CourseAttendingService } from "./course-attending/course-attending.serv
 
 
   providers: [StudentService, SubjectService, AccountService, StudyProgramService, PaymentService,
-    CourseAttendingService, DocumentService, TeacherTypeService, TeacherService],
+    CourseAttendingService, DocumentService, TeacherTypeService, TeacherService, ExamService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
