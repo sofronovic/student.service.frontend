@@ -17,6 +17,8 @@ import { TeacherTypeComponent} from './teacherType/teacherType.component';
 import { TeacherTypeDetailComponent} from './teacherType-detail/teacherType-detail.component';
 import { TeacherComponent } from  './teachers/teachers.component';
 import { TeacherDetailComponent} from './teachers-detail/teacher-detail.component';
+import { CourseLectureComponent} from './courselecture/courselecture.component';
+import { CourseLectureDetailComponent} from './courselecture-detail/course-lecture-detail.component';
 
 import {TeacherService} from './teachers/teachers.service';
 import { TeacherTypeService} from './teacherType/teacherType.service';
@@ -35,6 +37,7 @@ import { DocumentService } from './documents/document.service';
 import { DocumentDetailComponent } from './documents-detail/documents-detail.component';
 import { CourseAttendingComponent } from "./course-attending/course-attending.component";
 import { CourseAttendingService } from "./course-attending/course-attending.service";
+import { CourseLectureService} from './courselecture/courselecture.service';
 
 
 @NgModule({
@@ -55,7 +58,9 @@ import { CourseAttendingService } from "./course-attending/course-attending.serv
     TeacherTypeComponent,
     TeacherTypeDetailComponent,
     TeacherComponent,
-    TeacherDetailComponent
+    TeacherDetailComponent,
+    CourseLectureComponent,
+    CourseLectureDetailComponent
   ],
   imports: [
     NgbModule.forRoot(),
@@ -67,7 +72,7 @@ import { CourseAttendingService } from "./course-attending/course-attending.serv
 
 
   providers: [StudentService, SubjectService, AccountService, StudyProgramService, PaymentService,
-    CourseAttendingService, DocumentService, TeacherTypeService, TeacherService],
+    CourseAttendingService, DocumentService, TeacherTypeService, TeacherService, CourseLectureService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
