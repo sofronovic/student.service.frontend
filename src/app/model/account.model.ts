@@ -6,19 +6,19 @@ export class Account implements AccountInterfaces{
 	public balance: string;
 		
 	constructor(accountCfg:AccountInterfaces)
-	{	
+	{
 		this.id = accountCfg.id;
 		this.accountNumber = accountCfg.accountNumber;
 		this.modelNumber = accountCfg.modelNumber;
-		this.referenceNumber = accountCfg.referenceNumber;	
-		this.balance = accountCfg.balance;	
+		this.referenceNumber = accountCfg.referenceNumber;
+		this.balance = accountCfg.balance;
 	}
 }
 
 interface AccountInterfaces {
 	id?: number;
 	accountNumber: string;
-	modelNumber: string;	
+	modelNumber: string;
 	referenceNumber: string;
 	balance: string;
 }
