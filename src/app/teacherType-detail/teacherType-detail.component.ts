@@ -6,7 +6,7 @@ import { Location } from '@angular/common';
 
 import { TeacherTypeService } from "../teacherType/teacherType.service";
 
-import { TeacherType } from '../model/TeacherType.model';
+import { TeacherType } from '../model/teachertype.model';
 
 
 import 'rxjs/add/operator/switchMap';
