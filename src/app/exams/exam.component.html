@@ -1,0 +1,47 @@
+<div>
+  <h3>Exams</h3>
+</div>
+<table class="table table-bordered">
+  <tr>
+    <th>Student</th>
+    <th>Subject</th>
+    <th>Teacher</th>
+    <th>Type</th>
+    <th>Points</th>
+    <th>Score</th>
+  </tr>
+  <tr *ngFor="let exam of exams">
+    <td>
+      {{exam.student.indeks}}
+    </td>
+    <td>
+      {{exam.subject.name}}
+    </td>
+    <td>
+      {{exam.teacher.lastname}}
+    </td>
+    <td>
+      {{exam.type}}
+    </td>
+    <td>
+      {{exam.points}}
+    </td>
+    <td>
+      {{exam.score}}
+    </td>
+    <td>
+      <button type="button" class="btn btn-primary" aria-label="Edit" (click)="gotoEdit(exam)">
+        <span class="fa fa-edit" aria-hidden="true"></span>
+      </button>
+
+      <button type="button" class="btn btn-primary" aria-label="Delete" (click)="deleteExam(exam.id)">
+        <span class="fa fa-remove" aria-hidden="true"></span>
+      </button>
+    </td>
+  </tr>
+</table>
+<div class="right">
+  <button type="button" class="btn btn-primary" aria-label="Add" (click)="gotoAdd()">
+    <span class="fa fa-plus" aria-hidden="true"></span>
+  </button>
+</div>

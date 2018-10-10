@@ -1,20 +1,41 @@
-  <form >
+  <form #subjectForm="ngForm">
         <div class="form-group">
           <label for="field1c" class="form-control-label">Name</label>
-          <input type="text" [(ngModel)]="subject.name" placeholder="Subject name"
-             class="form-control" id="field1c" name="field1">
+          <input type="text" required minlength="3" maxlength="150" [(ngModel)]="subject.name" placeholder="Subject name"
+             class="form-control" id="field1c" name="field1" #subjectNameControl="ngModel">
+          <div *ngIf="subjectNameControl.errors && (subjectNameControl.dirty || subjectNameControl.touched)" class="alert alert-danger">
+            <div [hidden]="!subjectNameControl.errors.required">
+              Subject name is required!
+            </div>
+            <div [hidden]="!subjectNameControl.errors.minlength">
+              Subject name must be at least 3 characters long.
+            </div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="field2c" class="form-control-label">Label</label>
-          <input type="text" [(ngModel)]="subject.label" placeholder="Subject label"
-             class="form-control" id="field2c" name="field2">
+          <input type="text" required maxlength="50" [(ngModel)]="subject.label" placeholder="Subject label"
+             class="form-control" id="field2c" name="field2" #labelControl="ngModel">
+          <div *ngIf="labelControl.errors && (labelControl.dirty || labelControl.touched)" class="alert alert-danger">
+              <div [hidden]="!labelControl.errors.required">
+                 Subject label is required!
+              </div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="field3c" class="form-control-label">ECTS</label>
-          <input type="text" [(ngModel)]="subject.ects" placeholder="Subject ECTS"
-             class="form-control" id="field3c" name="field3">
+          <input type="text" required pattern="[0-9]+" maxlength="10" [(ngModel)]="subject.ects" placeholder="Subject ECTS"
+             class="form-control" id="field3c" name="field3" #ectsControl="ngModel">
+          <div *ngIf="ectsControl.errors && (ectsControl.dirty || ectsControl.touched)" class="alert alert-danger">
+              <div [hidden]="!ectsControl.errors.required">
+                 Subject ects is required!
+              </div>
+              <div [hidden]="!ectsControl.errors?.pattern">
+                 Subject ects must be a number.
+              </div>
+          </div>
         </div>
    </form>
 
@@ -30,5 +51,5 @@
 
 <div>
   <button class="btn btn-primary" (click)="goBack()">Cancel</button>
-  <button class="btn btn-primary" (click)="save()">OK</button>
+  <button class="btn btn-primary" [disabled]="!subjectForm.form.valid" (click)="save()">OK</button>
 </div>

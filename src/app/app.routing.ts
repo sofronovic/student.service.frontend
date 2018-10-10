@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { StudentsComponent } from './students/students.component';
 import { SubjectsComponent } from './subjects/subjects.component';
 import { AccountsComponent } from "./account/accounts.components";
+import { AccountDetailComponent } from "./account-detail/account-detail-component"
 import { SubjectDetailComponent } from "./subjects-detail/subjects-detail.component";
 import { StudyProgramDetailComponent } from "./study-programs-detail/study-program-detail-component";
 import { StudyProgramComponent } from "./studyPrograms/studyprogram.component";
@@ -20,6 +21,8 @@ import { TeacherComponent } from './teachers/teachers.component';
 import { TeacherDetailComponent} from './teachers-detail/teacher-detail.component';
 import { CourseLectureComponent} from './courselecture/courselecture.component';
 import { CourseLectureDetailComponent} from './courselecture-detail/course-lecture-detail.component';
+import { ExamsComponent } from "./exams/exam.component";
+import { ExamDetailComponent} from "./exams-detail/exam-detail.component";
 
 const routes: Routes = [
   { path: '', component: StudentsComponent },
@@ -28,6 +31,10 @@ const routes: Routes = [
   { path: 'addSubject', component: SubjectDetailComponent },
   { path: 'editSubjects/:id', component: SubjectDetailComponent},
   { path: 'accounts', component: AccountsComponent},
+  { path: 'addAccount', component: AccountDetailComponent},
+  { path: 'editAccount/:id', component: AccountDetailComponent},
+
+
   { path: 'studyPrograms', component: StudyProgramComponent},
   { path: 'addStudyProgram', component: StudyProgramDetailComponent},
   { path: 'editStudyProgram/:id', component: StudyProgramDetailComponent},
@@ -49,6 +56,9 @@ const routes: Routes = [
   { path: 'courseLecture' , component: CourseLectureComponent},
   { path: 'addCourseLecture' ,component: CourseLectureDetailComponent},
   { path: 'editCourseLecture/:id' ,component: CourseLectureDetailComponent},
+  { path: 'exams', component: ExamsComponent},
+  { path: 'addExam', component: ExamDetailComponent},
+  { path: 'editExam/:id', component: ExamDetailComponent},
   { path: '**', redirectTo: '' }
 ];
 
