@@ -19,7 +19,7 @@ import { TeacherComponent } from  './teachers/teachers.component';
 import { TeacherDetailComponent} from './teachers-detail/teacher-detail.component';
 import { CourseLectureComponent} from './courselecture/courselecture.component';
 import { CourseLectureDetailComponent} from './courselecture-detail/course-lecture-detail.component';
-
+import { CourseAttendingDetailComponent} from './course-attending-detail/course-attending-detail.component';
 
 import {TeacherService} from './teachers/teachers.service';
 import { TeacherTypeService} from './teacherType/teacherType.service';
@@ -70,10 +70,10 @@ import { ExamDetailComponent } from "./exams-detail/exam-detail.component";
     TeacherComponent,
     TeacherDetailComponent,
     CourseLectureComponent,
-    CourseLectureDetailComponent
-
+    CourseLectureDetailComponent,
     ExamsComponent,
-    ExamDetailComponent
+    ExamDetailComponent,
+    CourseAttendingDetailComponent
   ],
   imports: [
     NgbModule.forRoot(),
@@ -84,12 +84,9 @@ import { ExamDetailComponent } from "./exams-detail/exam-detail.component";
   ],
 
 
-  providers: [StudentService, SubjectService, AccountService, StudyProgramService, PaymentService, DocumentService, CourseAttendingService],
-
-
   providers: [StudentService, SubjectService, AccountService, StudyProgramService, PaymentService,
-    CourseAttendingService, DocumentService, TeacherTypeService, TeacherService, CourseLectureService],
-    CourseAttendingService, DocumentService, TeacherTypeService, TeacherService, ExamService],
+    CourseAttendingService, DocumentService, TeacherTypeService, TeacherService, CourseLectureService,
+   ExamService],
 
   bootstrap: [AppComponent]
 })

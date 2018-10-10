@@ -23,6 +23,7 @@ import { CourseLectureComponent} from './courselecture/courselecture.component';
 import { CourseLectureDetailComponent} from './courselecture-detail/course-lecture-detail.component';
 import { ExamsComponent } from "./exams/exam.component";
 import { ExamDetailComponent} from "./exams-detail/exam-detail.component";
+import { CourseAttendingDetailComponent} from './course-attending-detail/course-attending-detail.component';
 
 const routes: Routes = [
   { path: '', component: StudentsComponent },
@@ -47,6 +48,8 @@ const routes: Routes = [
 { path: 'addDocument', component: DocumentDetailComponent},
 { path: 'editDocument/:id', component: DocumentDetailComponent},
   { path: 'courseAttending', component: CourseAttendingComponent},
+  { path: 'addCourseAttending', component: CourseAttendingDetailComponent},
+    { path: 'editCourseAttending/:id', component: CourseAttendingDetailComponent},
   { path: 'teacherType', component: TeacherTypeComponent},
   { path: 'addTeacherType', component: TeacherTypeDetailComponent},
   { path: 'editTeacherType/:id', component: TeacherTypeDetailComponent},

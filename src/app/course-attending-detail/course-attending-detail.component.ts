@@ -15,10 +15,10 @@ import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'app-courseattending-detail',
-  templateUrl: './course-attending.component.html',
-  styleUrls: ['./course-attending.component.css']
+  templateUrl: './course-attending-detail.component.html',
+  styleUrls: ['./course-attending-detail.component.css']
 })
-export class CourseAttendingComponent implements OnInit {
+export class CourseAttendingDetailComponent implements OnInit {
   courseAttending: CourseAttending;
   subjects: SubjectModel[];
   students: Student[];
