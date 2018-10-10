@@ -13,6 +13,7 @@ import { PaymentDetailComponent } from "./payments-detail/payment-detail.compone
 import { StudentDetailComponent } from "./students-detail/student-detail-component";
 import { DocumentsComponent } from './documents/documents.component';
 import { DocumentDetailComponent } from './documents-detail/documents-detail.component';
+import { CourseAttendingComponent } from "./course-attending/course-attending.component";
 
 const routes: Routes = [
   { path: '', component: StudentsComponent },
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'documents' , component: DocumentsComponent},
 { path: 'addDocument', component: DocumentDetailComponent},
 { path: 'editDocument/:id', component: DocumentDetailComponent},
+  { path: 'courseAttending', component: CourseAttendingComponent},
   { path: '**', redirectTo: '' }
 ];
 
