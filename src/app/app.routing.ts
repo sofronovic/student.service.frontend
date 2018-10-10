@@ -11,6 +11,8 @@ import { StudyProgramComponent } from "./studyPrograms/studyprogram.component";
 import { PaymentsComponent } from "./payments/payments.component";
 import { PaymentDetailComponent } from "./payments-detail/payment-detail.component";
 import { StudentDetailComponent } from "./students-detail/student-detail-component";
+import { DocumentsComponent } from './documents/documents.component';
+import { DocumentDetailComponent } from './documents-detail/documents-detail.component';
 
 const routes: Routes = [
   { path: '', component: StudentsComponent },
@@ -27,6 +29,9 @@ const routes: Routes = [
   { path: 'editPayment/:id', component: PaymentDetailComponent },
   { path: 'addStudent', component: StudentDetailComponent},
   { path: 'editStudent/:id', component: StudentDetailComponent},
+  { path: 'documents' , component: DocumentsComponent},
+{ path: 'addDocument', component: DocumentDetailComponent},
+{ path: 'editDocument/:id', component: DocumentDetailComponent},
   { path: '**', redirectTo: '' }
 ];
 
