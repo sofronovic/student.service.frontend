@@ -18,8 +18,10 @@ import { TeacherTypeDetailComponent} from './teacherType-detail/teacherType-deta
 import { TeacherComponent } from  './teachers/teachers.component';
 import { TeacherDetailComponent} from './teachers-detail/teacher-detail.component';
 
+
 import {TeacherService} from './teachers/teachers.service';
 import { TeacherTypeService} from './teacherType/teacherType.service';
+
 import { StudentService } from './students/student.service';
 import { StudyProgramService } from './studyPrograms/studyprogram.service';
 import { SubjectDetailComponent } from './subjects-detail/subjects-detail.component';
@@ -31,6 +33,7 @@ import { PaymentsComponent } from "./payments/payments.component";
 import { PaymentService } from "./payments/payment.service";
 import { PaymentDetailComponent } from "./payments-detail/payment-detail.component";
 import { StudentDetailComponent } from "./students-detail/student-detail-component";
+import {AccountDetailComponent} from "./account-detail/account-detail-component"
 import { DocumentService } from './documents/document.service';
 import { DocumentDetailComponent } from './documents-detail/documents-detail.component';
 import { CourseAttendingComponent } from "./course-attending/course-attending.component";
@@ -38,6 +41,7 @@ import { CourseAttendingService } from "./course-attending/course-attending.serv
 import { ExamService } from "./exams/exam.service";
 import { ExamsComponent } from "./exams/exam.component";
 import { ExamDetailComponent } from "./exams-detail/exam-detail.component";
+
 
 
 @NgModule({
@@ -52,6 +56,7 @@ import { ExamDetailComponent } from "./exams-detail/exam-detail.component";
     PaymentsComponent,
     PaymentDetailComponent,
     StudentDetailComponent,
+   AccountDetailComponent,
     DocumentsComponent,
     DocumentDetailComponent,
     CourseAttendingComponent,

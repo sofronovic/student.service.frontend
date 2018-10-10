@@ -15,11 +15,11 @@ export class Student extends User implements IStudent, IUser {
 	public paymentList: Array<Payment>;
 
 	public constructor(student: IUser & IStudent)
-	{
-		super(student);
-		this.indeks = student.indeks;
-		this.studyProgram = student.studyProgram;
-	}
+		{
+			super(student);
+			this.indeks = student.indeks;
+			this.studyProgram = student.studyProgram;
+		}
 }
 
 export interface IStudent {
