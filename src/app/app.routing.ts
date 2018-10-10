@@ -19,6 +19,8 @@ import { TeacherTypeComponent} from './teacherType/teacherType.component';
 import { TeacherTypeDetailComponent} from './teacherType-detail/teacherType-detail.component';
 import { TeacherComponent } from './teachers/teachers.component';
 import { TeacherDetailComponent} from './teachers-detail/teacher-detail.component';
+import { CourseLectureComponent} from './courselecture/courselecture.component';
+import { CourseLectureDetailComponent} from './courselecture-detail/course-lecture-detail.component';
 import { ExamsComponent } from "./exams/exam.component";
 import { ExamDetailComponent} from "./exams-detail/exam-detail.component";
 
@@ -51,6 +53,9 @@ const routes: Routes = [
   { path: 'teachers', component: TeacherComponent},
   { path: 'addTeacher',  component: TeacherDetailComponent},
   { path: 'editTeacher/:id' , component: TeacherDetailComponent},
+  { path: 'courseLecture' , component: CourseLectureComponent},
+  { path: 'addCourseLecture' ,component: CourseLectureDetailComponent},
+  { path: 'editCourseLecture/:id' ,component: CourseLectureDetailComponent},
   { path: 'exams', component: ExamsComponent},
   { path: 'addExam', component: ExamDetailComponent},
   { path: 'editExam/:id', component: ExamDetailComponent},

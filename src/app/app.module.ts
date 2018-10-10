@@ -17,6 +17,8 @@ import { TeacherTypeComponent} from './teacherType/teacherType.component';
 import { TeacherTypeDetailComponent} from './teacherType-detail/teacherType-detail.component';
 import { TeacherComponent } from  './teachers/teachers.component';
 import { TeacherDetailComponent} from './teachers-detail/teacher-detail.component';
+import { CourseLectureComponent} from './courselecture/courselecture.component';
+import { CourseLectureDetailComponent} from './courselecture-detail/course-lecture-detail.component';
 
 
 import {TeacherService} from './teachers/teachers.service';
@@ -38,9 +40,12 @@ import { DocumentService } from './documents/document.service';
 import { DocumentDetailComponent } from './documents-detail/documents-detail.component';
 import { CourseAttendingComponent } from "./course-attending/course-attending.component";
 import { CourseAttendingService } from "./course-attending/course-attending.service";
+import { CourseLectureService} from './courselecture/courselecture.service';
+
 import { ExamService } from "./exams/exam.service";
 import { ExamsComponent } from "./exams/exam.component";
 import { ExamDetailComponent } from "./exams-detail/exam-detail.component";
+
 
 
 
@@ -64,6 +69,9 @@ import { ExamDetailComponent } from "./exams-detail/exam-detail.component";
     TeacherTypeDetailComponent,
     TeacherComponent,
     TeacherDetailComponent,
+    CourseLectureComponent,
+    CourseLectureDetailComponent
+
     ExamsComponent,
     ExamDetailComponent
   ],
@@ -80,6 +88,7 @@ import { ExamDetailComponent } from "./exams-detail/exam-detail.component";
 
 
   providers: [StudentService, SubjectService, AccountService, StudyProgramService, PaymentService,
+    CourseAttendingService, DocumentService, TeacherTypeService, TeacherService, CourseLectureService],
     CourseAttendingService, DocumentService, TeacherTypeService, TeacherService, ExamService],
 
   bootstrap: [AppComponent]
