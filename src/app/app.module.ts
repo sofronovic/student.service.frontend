@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { StudentsComponent } from './students/students.component';
 import { SubjectsComponent} from './subjects/subjects.component';
 import { AccountsComponent} from './account/accounts.components';
+import { DocumentsComponent } from './documents/documents.component';
 
 import { StudentService } from './students/student.service';
 import { StudyProgramService } from './studyPrograms/studyprogram.service';
@@ -24,6 +25,8 @@ import { PaymentsComponent } from "./payments/payments.component";
 import { PaymentService } from "./payments/payment.service";
 import { PaymentDetailComponent } from "./payments-detail/payment-detail.component";
 import { StudentDetailComponent } from "./students-detail/student-detail-component";
+import { DocumentService } from './documents/document.service';
+import { DocumentDetailComponent } from './documents-detail/documents-detail.component';
 import { CourseAttendingComponent } from "./course-attending/course-attending.component";
 import { CourseAttendingService } from "./course-attending/course-attending.service";
 
@@ -40,6 +43,8 @@ import { CourseAttendingService } from "./course-attending/course-attending.serv
     PaymentsComponent,
     PaymentDetailComponent,
     StudentDetailComponent,
+    DocumentsComponent,
+    DocumentDetailComponent
     CourseAttendingComponent,
   ],
   imports: [
@@ -49,6 +54,8 @@ import { CourseAttendingService } from "./course-attending/course-attending.serv
     HttpModule,
     routing
   ],
+
+  providers: [StudentService, SubjectService, AccountService, StudyProgramService, PaymentService, DocumentService],
   providers: [StudentService, SubjectService, AccountService, StudyProgramService, PaymentService, CourseAttendingService],
   bootstrap: [AppComponent]
 })
