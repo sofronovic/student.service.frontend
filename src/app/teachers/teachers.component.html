@@ -1,0 +1,43 @@
+<div>
+  <h3>Teachers</h3>
+</div>
+<table class="table table-bordered">
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Birthday</th>
+    <th>Email</th>
+    <th>Teacher type</th>
+  </tr>
+  <tr *ngFor="let teacher of teachers">
+    <td>
+      {{teacher.firstname}}
+    </td>
+    <td>
+      {{teacher.lastname}}
+    </td>
+    <td>
+      {{teacher.birthday}}
+    </td>
+    <td>
+      {{teacher.email}}
+    </td>
+    <td>
+      {{teacher.teacherType.name}}
+    </td>
+    <td>
+      <button type="button" class="btn btn-primary" aria-label="Edit" (click)="gotoEdit(teacher)">
+        <span class="fa fa-edit" aria-hidden="true"></span>
+      </button>
+
+      <button type="button" class="btn btn-primary" aria-label="Delete" (click)="deleteTeacher(teacher.id)">
+        <span class="fa fa-remove" aria-hidden="true"></span>
+      </button>
+    </td>
+  </tr>
+</table>
+<div class="right">
+  <button type="button" class="btn btn-primary" aria-label="Add" (click)="gotoAdd()">
+    <span class="fa fa-plus" aria-hidden="true"></span>
+  </button>
+</div>

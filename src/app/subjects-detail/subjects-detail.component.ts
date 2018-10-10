@@ -7,7 +7,7 @@ import { SubjectService } from '../subjects/subject.service';
 import { StudyProgramService } from "../studyPrograms/studyprogram.service";
 
 import { SubjectModel } from '../model/subject.model';
-import { StudyProgram } from '../model/studyProgram.model';
+import { StudyProgram } from '../model/studyprogram.model';
 import { Student } from '../model/student.model';
 
 import 'rxjs/add/operator/switchMap';

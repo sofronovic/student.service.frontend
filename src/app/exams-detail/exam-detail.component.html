@@ -1,0 +1,48 @@
+<div>
+   <h3>Exam</h3>
+
+</div>
+
+<h3>Subject</h3>
+<div class="form-group">
+   <select class="form-control" [(ngModel)]="exam.subject">
+         <option *ngFor="let s of subjects" [ngValue]="s">{{s.name}}</option>
+       </select>
+</div>
+
+<h3>Student</h3>
+<div class="form-group">
+   <select class="form-control" [(ngModel)]="exam.student">
+         <option *ngFor="let s of students" [ngValue]="s">{{s.index}}</option>
+       </select>
+</div>
+
+<h3>Teacher</h3>
+<div class="form-group">
+   <select class="form-control" [(ngModel)]="exam.teacher">
+         <option *ngFor="let s of teachers" [ngValue]="s">{{s.lastname}}</option>
+       </select>
+</div>
+
+<div class="form-group">
+  <label for="field2c" class="form-control-label">Exam type</label>
+  <input type="text" [(ngModel)]="exam.type" placeholder="Exam type"
+     class="form-control" id="field2c" name="field2">
+</div>
+
+<div class="form-group">
+  <label for="field3c" class="form-control-label">Points</label>
+  <input type="text" [(ngModel)]="exam.points" placeholder="Exam points"
+     class="form-control" id="field3c" name="field3c">
+</div>
+
+<div class="form-group">
+  <label for="field4c" class="form-control-label">Score</label>
+  <input type="text" [(ngModel)]="exam.score" placeholder="Exam score"
+     class="form-control" id="field4c" name="field4c">
+</div>
+
+<div>
+<button class="btn btn-primary" (click)="goBack()">Cancel</button>
+<button class="btn btn-primary" (click)="save()">OK</button>
+</div>
