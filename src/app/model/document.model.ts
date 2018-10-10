@@ -1,11 +1,22 @@
 import { Student } from "./student.model";
+import { IUser } from "./user.model"
 
-export class Document {
+export class Document implements  DocumentInterface{
 	public id: number;
 	public name: string;
 	public student: Student;
 
-	public constructor(){
-
+	constructor(documentCfg:DocumentInterface) {
+		this.id = documentCfg.id;
+		this.name = documentCfg.name;
+		this.student = documentCfg.student;
 	}
+}
+
+interface DocumentInterface {
+	id?: number;
+	name: string;
+	student: Student;
+/*	courseAttending: Array<CourseAttending>;
+	courseLecture: Array<CourseLecture>;*/
 }

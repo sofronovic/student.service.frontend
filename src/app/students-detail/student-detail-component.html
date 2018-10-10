@@ -1,41 +1,49 @@
-<form >
-      <div class="form-group">
-        <label for="field1c" class="form-control-label">Firstname</label>
-        <input type="text" [(ngModel)]="student.firstname" placeholder="First name"
-           class="form-control" id="field1c" name="field1">
-      </div>
+  <form >
+        <div class="form-group">
+          <label for="field1c" class="form-control-label">Username</label>
+          <input type="text" [(ngModel)]="student.userName" placeholder="Username"
+             class="form-control" id="field1c" name="field1">
+        </div>
 
-      <div class="form-group">
-        <label for="field2c" class="form-control-label">Lastname</label>
-        <input type="text" [(ngModel)]="student.lastname" placeholder="Last name"
-           class="form-control" id="field2c" name="field2">
-      </div>
+        <div class="form-group">
+          <label for="field2c" class="form-control-label">First name</label>
+          <input type="text" [(ngModel)]="student.firstName" placeholder="First name"
+             class="form-control" id="field2c" name="field2">
+        </div>
 
-      <div class="form-group">
-        <label for="field3c" class="form-control-label">Birthday</label>
-        <input type="text" [(ngModel)]="student.birthday" placeholder="Birthday"
-           class="form-control" id="field3c" name="field3">
-      </div>
+        <div class="form-group">
+          <label for="field3c" class="form-control-label">Last name</label>
+          <input type="text" [(ngModel)]="student.lastName" placeholder="Last name"
+             class="form-control" id="field3c" name="field3">
+        </div>
+                <div class="form-group">
+          <label for="Birthday" class="form-control-label">Birthday</label>
+          <input type="text" [(ngModel)]="student.birthday" placeholder="Birthday"
+             class="form-control" id="Birthday" name="Birthday">
+        </div>
+                <div class="form-group">
+          <label for="email" class="form-control-label">Email</label>
+          <input type="text" [(ngModel)]="student.email" placeholder="Email"
+             class="form-control" id="email" name="email">
+        </div>
+                <div class="form-group">
+          <label for="indeks" class="form-control-label">Indeks</label>
+          <input type="text" [(ngModel)]="student.index" placeholder="Indeks"
+             class="form-control" id="indeks" name="indeks">
+        </div>
+   </form>
 
-      <div class="form-group">
-        <label for="field3c" class="form-control-label">Email</label>
-        <input type="text" [(ngModel)]="student.email" placeholder="Email"
-           class="form-control" id="field3c" name="field3">
-      </div>
-
-      <div class="form-group">
-        <label for="field3c" class="form-control-label">Index</label>
-        <input type="text" [(ngModel)]="student.indeks" placeholder="Index"
-           class="form-control" id="field3c" name="field3">
-      </div>
-
-      <div class="form-group">
-           <select class="form-control" [(ngModel)]="student.studyProgram">
-                 <option *ngFor="let s of studyPrograms" [ngValue]="s">{{s.name}}</option>
-               </select>
-      </div>
- </form>
 <div>
-<button class="btn btn-primary" (click)="goBack()">Cancel</button>
-<button class="btn btn-primary" (click)="save()">OK</button>
+     <h3>Study program</h3>
+</div>
+
+<div class="form-group">
+     <select class="form-control" [(ngModel)]="student.studyProgram">
+           <option *ngFor="let s of studyPrograms" [ngValue]="s">{{s.name}}</option>
+         </select>
+</div>
+
+<div>
+  <button class="btn btn-primary" (click)="goBack()">Cancel</button>
+  <button class="btn btn-primary" (click)="save()">OK</button>
 </div>
