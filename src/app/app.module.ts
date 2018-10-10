@@ -13,6 +13,7 @@ import { StudentsComponent } from './students/students.component';
 import { SubjectsComponent} from './subjects/subjects.component';
 import { AccountsComponent} from './account/accounts.components';
 
+
 import { StudentService } from './students/student.service';
 import { StudyProgramService } from './studyPrograms/studyprogram.service';
 import { SubjectDetailComponent } from './subjects-detail/subjects-detail.component';
@@ -24,6 +25,7 @@ import { PaymentsComponent } from "./payments/payments.component";
 import { PaymentService } from "./payments/payment.service";
 import { PaymentDetailComponent } from "./payments-detail/payment-detail.component";
 import { StudentDetailComponent } from "./students-detail/student-detail-component";
+import {AccountDetailComponent} from "./account-detail/account-detail-component"
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { StudentDetailComponent } from "./students-detail/student-detail-compone
     PaymentsComponent,
     PaymentDetailComponent,
     StudentDetailComponent,
+    AccountDetailComponent
   ],
   imports: [
     NgbModule.forRoot(),
