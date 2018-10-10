@@ -1,23 +1,44 @@
-  <form >
+  <form #spForm="ngForm">
         <div class="form-group">
           <label for="field1c" class="form-control-label">Name</label>
-          <input type="text" [(ngModel)]="studyProgram.name" placeholder="Study program name"
-             class="form-control" id="field1c" name="field1">
+          <input type="text" required minlength="5" maxlength="40" [(ngModel)]="studyProgram.name" placeholder="Study program name"
+             class="form-control" id="field1c" name="field1" #nameControl="ngModel">
+          <div *ngIf="nameControl.errors && (nameControl.dirty || nameControl.touched)" class="alert alert-danger">
+             <div [hidden]="!nameControl.errors.required">
+               Study program name is required!
+             </div>
+             <div [hidden]="!nameControl.errors.minlength">
+               Study program name must be at least 5 characters long.
+             </div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="field2c" class="form-control-label">Duration</label>
-          <input type="text" [(ngModel)]="studyProgram.duration" placeholder="Study program duration"
-             class="form-control" id="field2c" name="field2">
+          <input type="text" required pattern="[0-9]+" maxlength="9" [(ngModel)]="studyProgram.duration" placeholder="Study program duration"
+             class="form-control" id="field2c" name="field2" #durationControl="ngModel">
+          <div *ngIf="durationControl.errors && (durationControl.dirty || durationControl.touched)" class="alert alert-danger">
+              <div [hidden]="!durationControl.errors.required">
+                Study program duration is required!
+              </div>
+              <div [hidden]="!durationControl.errors?.pattern">
+                Study program duration must be a number.
+              </div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="field3c" class="form-control-label">Course type</label>
-          <input type="text" [(ngModel)]="studyProgram.courseType" placeholder="Course type"
-             class="form-control" id="field3c" name="field3">
+          <input type="text" required maxlength="40" [(ngModel)]="studyProgram.courseType" placeholder="Course type"
+             class="form-control" id="field3c" name="field3" #courseTypeControl="ngModel">
+          <div *ngIf="courseTypeControl.errors && (courseTypeControl.dirty || courseTypeControl.touched)" class="alert alert-danger">
+              <div [hidden]="!courseTypeControl.errors.required">
+                  Course type is required!
+              </div>
+          </div>
         </div>
    </form>
 <div>
   <button class="btn btn-primary" (click)="goBack()">Cancel</button>
-  <button class="btn btn-primary" (click)="save()">OK</button>
+  <button class="btn btn-primary" [disabled]="!spForm.form.valid" (click)="save()">OK</button>
 </div>

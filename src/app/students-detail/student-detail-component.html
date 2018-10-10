@@ -1,35 +1,80 @@
-  <form >
+  <form #myForm="ngForm">
         <div class="form-group">
           <label for="field1c" class="form-control-label">Username</label>
-          <input type="text" [(ngModel)]="student.userName" placeholder="Username"
-             class="form-control" id="field1c" name="field1">
+          <input type="text" required minlength="5" maxlength="40" [(ngModel)]="student.userName" placeholder="Username"
+             class="form-control" id="field1c" name="field1" #usernameControl="ngModel">
+          <div *ngIf="usernameControl.errors && (usernameControl.dirty || usernameControl.touched)" class="alert alert-danger">
+            <div [hidden]="!usernameControl.errors.required">
+              Username is required!
+            </div>
+            <div [hidden]="!usernameControl.errors.minlength">
+              Username must be at least 5 characters long.
+            </div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="field2c" class="form-control-label">First name</label>
-          <input type="text" [(ngModel)]="student.firstName" placeholder="First name"
-             class="form-control" id="field2c" name="field2">
+          <input type="text" required minlength="5" maxlength="40" [(ngModel)]="student.firstName" placeholder="First name"
+          class="form-control" id="field2c" name="field2" #firstNameControl="ngModel">
+          <div *ngIf="firstNameControl.errors && (firstNameControl.dirty || firstNameControl.touched)" class="alert alert-danger">
+            <div [hidden]="!firstNameControl.errors.required">
+              First name is required!
+            </div>
+            <div [hidden]="!firstNameControl.errors.minlength">
+              First name must be at least 5 characters long.
+            </div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="field3c" class="form-control-label">Last name</label>
-          <input type="text" [(ngModel)]="student.lastName" placeholder="Last name"
-             class="form-control" id="field3c" name="field3">
+          <input type="text" required minlength="5" maxlength="40" [(ngModel)]="student.lastName" placeholder="Last name"
+             class="form-control" id="field3c" name="field3" #lastNameControl="ngModel">
+          <div *ngIf="lastNameControl.errors && (lastNameControl.dirty || lastNameControl.touched)" class="alert alert-danger">
+              <div [hidden]="!lastNameControl.errors.required">
+                 Last name is required!
+              </div>
+              <div [hidden]="!lastNameControl.errors.minlength">
+                 Last name must be at least 5 characters long.
+              </div>
+          </div>
         </div>
-                <div class="form-group">
+
+        <div class="form-group">
           <label for="Birthday" class="form-control-label">Birthday</label>
-          <input type="text" [(ngModel)]="student.birthday" placeholder="Birthday"
-             class="form-control" id="Birthday" name="Birthday">
+          <input type="text" required [(ngModel)]="student.birthday" placeholder="Birthday"
+             class="form-control" id="Birthday" name="Birthday" #birthdayControl="ngModel">
+          <div *ngIf="lastNameControl.errors && (lastNameControl.dirty || lastNameControl.touched)" class="alert alert-danger">
+            <div [hidden]="!lastNameControl.errors.required">
+                Birthday is required!
+            </div>
+          </div>
         </div>
-                <div class="form-group">
+
+        <div class="form-group">
           <label for="email" class="form-control-label">Email</label>
-          <input type="text" [(ngModel)]="student.email" placeholder="Email"
-             class="form-control" id="email" name="email">
+          <input type="text" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="student.email"
+              placeholder="Email" class="form-control" id="email" name="email" #emailControl="ngModel">
+          <div *ngIf="emailControl.errors && (emailControl.dirty || emailControl.touched)" class="alert alert-danger">
+            <div [hidden]="!emailControl.errors.required">
+              Email is required!
+            </div>
+            <div [hidden]="!emailControl.errors?.pattern">
+              Email is invalid.
+            </div>
+          </div>
         </div>
-                <div class="form-group">
+
+        <div class="form-group">
           <label for="indeks" class="form-control-label">Indeks</label>
-          <input type="text" [(ngModel)]="student.index" placeholder="Indeks"
-             class="form-control" id="indeks" name="indeks">
+          <input type="text" required [(ngModel)]="student.index" placeholder="Indeks"
+             class="form-control" id="indeks" name="indeks" #indeksControl="ngModel">
+          <div *ngIf="indeksControl.errors && (indeksControl.dirty || indeksControl.touched)" class="alert alert-danger">
+            <div [hidden]="!indeksControl.errors.required">
+              Indeks is required!
+            </div>
+          </div>
         </div>
    </form>
 
@@ -45,5 +90,5 @@
 
 <div>
   <button class="btn btn-primary" (click)="goBack()">Cancel</button>
-  <button class="btn btn-primary" (click)="save()">OK</button>
+  <button class="btn btn-primary" [disabled]="!myForm.form.valid" (click)="save()">OK</button>
 </div>

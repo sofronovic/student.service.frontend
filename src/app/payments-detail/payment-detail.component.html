@@ -1,20 +1,41 @@
-  <form >
+  <form #payForm="ngForm">
         <div class="form-group">
           <label for="field1c" class="form-control-label">Description</label>
-          <input type="text" [(ngModel)]="payment.description" placeholder="Payment description"
-             class="form-control" id="field1c" name="field1">
+          <input type="text" required minlength="3" maxlength="150" [(ngModel)]="payment.description" placeholder="Payment description"
+             class="form-control" id="field1c" name="field1" #payDescrControl="ngModel">
+          <div *ngIf="payDescrControl.errors && (payDescrControl.dirty || payDescrControl.touched)" class="alert alert-danger">
+              <div [hidden]="!payDescrControl.errors.required">
+                Payment description is required!
+              </div>
+              <div [hidden]="!payDescrControl.errors.minlength">
+                Payment description must be at least 3 characters long.
+              </div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="field2c" class="form-control-label">Date</label>
-          <input type="text" [(ngModel)]="payment.date" placeholder="Payment date"
-             class="form-control" id="field2c" name="field2">
+          <input type="text" required minlength="6" maxlength="30" [(ngModel)]="payment.date" placeholder="Payment date"
+             class="form-control" id="field2c" name="field2" #payDateControl="ngModel">
+          <div *ngIf="payDateControl.errors && (payDateControl.dirty || payDateControl.touched)" class="alert alert-danger">
+              <div [hidden]="!payDateControl.errors.required">
+                Payment date is required!
+              </div>
+              <div [hidden]="!payDateControl.errors.minlength">
+                Payment date must be at least 6 characters long.
+              </div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="field3c" class="form-control-label">Amount</label>
-          <input type="text" [(ngModel)]="payment.amount" placeholder="Payment amount"
-             class="form-control" id="field3c" name="field3">
+          <input type="text" required [(ngModel)]="payment.amount" placeholder="Payment amount"
+             class="form-control" id="field3c" name="field3" #payAmountControl="ngModel">
+          <div *ngIf="payAmountControl.errors && (payAmountControl.dirty || payAmountControl.touched)" class="alert alert-danger">
+              <div [hidden]="!payAmountControl.errors.required">
+                  Payment amount is required!
+              </div>
+          </div>
         </div>
    </form>
 
@@ -30,5 +51,5 @@
 
 <div>
   <button class="btn btn-primary" (click)="goBack()">Cancel</button>
-  <button class="btn btn-primary" (click)="save()">OK</button>
+  <button class="btn btn-primary" [disabled]="!payForm.form.valid" (click)="save()">OK</button>
 </div>

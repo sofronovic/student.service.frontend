@@ -76,8 +76,12 @@ import { ExamDetailComponent } from "./exams-detail/exam-detail.component";
   ],
 
 
+  providers: [StudentService, SubjectService, AccountService, StudyProgramService, PaymentService, DocumentService, CourseAttendingService],
+
+
   providers: [StudentService, SubjectService, AccountService, StudyProgramService, PaymentService,
     CourseAttendingService, DocumentService, TeacherTypeService, TeacherService, ExamService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
